@@ -1,0 +1,169 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Boadilla}
+\usepackage{xcolor}
+\usepackage{amsmath}
+%\usepackage{parskip}
+%\usecolortheme{seahorse}
+\setbeamersize{text margin left=30mm,
+			text margin right=30mm}
+
+%----
+%Information to be included in the title page:
+%%https://www.overleaf.com/learn/latex/Beamer
+\title[Dynamic Programming Part I] %optional
+{Introduction to Dynamic Programming}
+\subtitle{Part I: An Overview}
+\author[PPE Phil(e)]
+{PPE Phil(e)\inst{1}}
+\institute[] % (optional)
+{
+  \inst{1}%
+  material @ https://github.com/PPEphile
+}
+\date[2021] % (optional)
+{September 2021}
+%---
+
+\begin{document}
+%---------------------------------------------------------
+%Title Page
+\frame{\titlepage}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+%Table of contents
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+%Section: 1
+\section{Dynamic Programming}
+
+%Slide 3
+\begin{frame}
+\frametitle{Dynamic Programming}
+Dynamic Programming is a technique for solving (dynamic) \textbf{optimization} problems.
+
+\begin{itemize}
+	\item Dynamic: your \textbf{rewards} and \textbf{limits} change, depending on your actions
+	\item Programming: you try to identify the best strategies (plans/policies/programs) (i.e. which maximise or minimise a goal function)
+\end{itemize}
+
+
+A dynamic optimization problem often has the form:
+\begin{equation}
+	\max_{(c_t)^{\infty}_{t=0}} \sum^{\infty}_{t=0} \beta^t U(c_t) \quad s.t. \quad \textrm{constraints fulfilled for} \, \forall t
+\end{equation}
+where we for now assume that a maximum really exists.
+\end{frame}
+
+%Slide 4
+\begin{frame}
+\frametitle{An Example: Growing corn}
+\begin{itemize}
+	\item Infinite horizon: t=0,1,2, ...
+	\item Each period we decide how much of the harvest to consume: $c_t$
+	\item Remainder is planted for next period: $f(k_t)-c_t=k_{t+1}$
+	\item We start with a stock of corn of $k_0$
+	\item Eating corn gives us utility $U(c_t)$, but we discount future meals at the rate $\beta^t$
+\end{itemize}
+
+Substituting $c_t$ for $f(k_t) - k_{t+1}$, we have
+\begin{equation}
+	\max_{0 \leq k_{t+1} \leq f(k_t)} \sum^{\infty}_{t=0} \beta^t U(f(k_t) - k_{t+1})
+\end{equation}
+
+\color{red}\textbf{Hence, we have an infinite number of variables and constraints!}
+\end{frame}
+
+\begin{frame}
+\frametitle{An indirect attack: Dynamic Programming}
+"Direct attacks" (e.g. Kuhn-Tucker \& Lagrange) only sometimes work in such scenarios. Dynamic Programming approaches the problem indirectly via the so-called \textbf{value function}.
+
+\begin{itemize}
+\item Translate $U(f(k_t) - k_{t+1}) \rightarrow F(k_t, k_{t+1})$
+\end{itemize}
+
+We now call the \textbf{Sequence Problem (SP)}
+\begin{equation}
+	\max_{0 \leq k_{t+1} \leq f(k_t)} \sum^{\infty}_{t=0} \beta^t F(k_t, k_{t+1}) \tag{SP}
+\end{equation}
+
+The \textbf{value function} is defined as the solution to the (SP)
+\begin{equation*}
+	v^{*}(k_0) = \max_{0 \leq k_{t+1} \leq f(k_t)} \sum^{\infty}_{t=0} \beta^t F(k_t, k_{t+1})
+\end{equation*}
+\end{frame}
+
+\begin{frame}
+\frametitle{From (SP) to Bellman Equation}
+But now, something interesting happens:
+\begin{align*}
+	v^{*}(k_0)&= \max_{0 \leq k_{t+1} \leq f(k_t)} \sum^{\infty}_{t=0} \beta^t F(k_t, k_{t+1}) \\
+	&= \max_{0 \leq k_{1} \leq f(k_0)} \left\lbrace F(k_0, k_1) + \max_{0 \leq k_{t+1} \leq f(k_t)} \sum^{\infty}_{t=1} \beta^t F(k_t, k_{t+1}) \right\rbrace \\
+	&= \max_{0 \leq k_{1} \leq f(k_0)} \left\lbrace F(k_0, k_1) + \beta \max_{0 \leq k_{t+2} \leq f(k_t)} \sum^{\infty}_{t=0} \beta^t F(k_{t+1}, k_{t+2}) \right\rbrace	\\
+	&= \max_{0 \leq k_{1} \leq f(k_0)} \left\lbrace F(k_0, k_1) + \beta v^*(k_1) \right\rbrace
+\end{align*}
+
+This is called the Bellman equation, which uses Bellman's \textbf{Principle of Optimality}: For a policy to be optimal, whatever we choose today, the remaining decisions must still be optimal.
+\end{frame}
+
+\begin{frame}
+In the Bellman equation we just saw that 
+\begin{equation*}
+v^*(k_0) = \max_{0 \leq k_{1} \leq f(k_0)} \left\lbrace F(k_0, k_1) + \beta v^*(k_1) \right\rbrace
+\end{equation*}
+
+As a result, we know that for any candidate function $v$ to be the true value function $v^*$, it needs to map onto itself! We call this \color{blue}\textbf{necessary condition} \color{black} the \textbf{Functional Equation (FE)}
+
+\begin{block}{Functional Equation}
+\begin{equation}
+v(x) = \max_{y \in \Gamma(x)} \left\lbrace F(x, y) + \beta v(y) \right\rbrace \tag{FE}
+\end{equation}
+where $\Gamma(x)$ is the set of admissible values of $y$ given the current state $x$.
+\end{block}
+\begin{itemize}
+\item This is a "functional" equation because the unknown is a \textit{function}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wrap-up}
+\begin{itemize}
+\item We can now start to see what it means that Dynamic Programming approaches the (SP) through the value function. 
+\begin{itemize}
+\item As we will see in the next videos, Dynamic Programming makes use of the fact the we can often learn a lot about the value function, which, in turn, helps us learning about the optimal policy.
+\end{itemize}
+\end{itemize}
+\medskip
+
+\textbf{Check-points for today:}
+\begin{itemize}
+\item Understand what a dynamic optimization problem is
+\item Understand what a value function is
+\item Conceptualize that we are searching for an unknown function
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------
+%Section: 2
+\section{Additional Material}
+
+\begin{frame}
+\frametitle{Additional Material}
+In notation and exposition, the series closely orients itself on Stokey and Lucas (1989), which is one of the most popular textbooks on Dynamic Programming. If you don't understand something or wish to dig deeper, please check-out the textbook.
+\medskip
+
+Helpful references:
+\begin{itemize}
+\item Simon, C.P. and Blume, L. (1994) \textit{Mathematics for Economists}. New York.
+\item Stokey, N.L., Lucas, R.E. and Prescott, E.C. (1989) \textit{Recursive Methods in Economic Dynamics}. Harvard University Press. doi:10.2307/j.ctvjnrt76.
+\end{itemize}
+
+
+\end{frame}
+
+\end{document}
