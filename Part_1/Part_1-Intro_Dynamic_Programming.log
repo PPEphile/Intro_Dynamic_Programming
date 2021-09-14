@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.5.16)  14 SEP 2021 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.5.16)  14 SEP 2021 11:41
 entering extended mode
 **./Part_1-Intro_Dynamic_Programming.tex
 (Part_1-Intro_Dynamic_Programming.tex
@@ -1107,7 +1107,7 @@ Overfull \hbox (30.06493pt too wide) detected at line 113
  (Part_1-Intro_Dynamic_Programming.aux)
 Package rerunfilecheck Info: File `Part_1-Intro_Dynamic_Programming.out' has no
 t changed.
-(rerunfilecheck)             Checksum: 7167090092F4B4C8C0195158AE479D29;108.
+(rerunfilecheck)             Checksum: A8CF4070172CA90875C06BDDFA4E9559;120.
  ) 
 Here is how much of TeX's memory you used:
  18155 strings out of 479624
@@ -1134,7 +1134,7 @@ ber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
 Users/Philipp Schreiber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb><C:/Users/Philipp Schreiber/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Part_1-Intro_Dynamic_Programming.pdf (10 pages, 204994 bytes)
+Output written on Part_1-Intro_Dynamic_Programming.pdf (10 pages, 205021 bytes)
 .
 PDF statistics:
  366 PDF objects out of 1000 (max. 8388607)
