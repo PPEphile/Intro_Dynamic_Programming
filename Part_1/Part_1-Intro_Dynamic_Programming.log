@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.5.16)  13 SEP 2021 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.5.16)  14 SEP 2021 10:40
 entering extended mode
 **./Part_1-Intro_Dynamic_Programming.tex
 (Part_1-Intro_Dynamic_Programming.tex
@@ -1080,7 +1080,7 @@ rt_1-Intro_Dynamic_Programming.toc) [2
 ] [5
 
 ]
-Overfull \hbox (30.06493pt too wide) detected at line 112
+Overfull \hbox (30.06493pt too wide) detected at line 113
 []
  []
 
@@ -1091,6 +1091,8 @@ Overfull \hbox (30.06493pt too wide) detected at line 112
 ] [8
 
 ] [9
+
+] [10
 
 ]
 \tf@nav=\write6
@@ -1108,8 +1110,8 @@ t changed.
 (rerunfilecheck)             Checksum: 7167090092F4B4C8C0195158AE479D29;108.
  ) 
 Here is how much of TeX's memory you used:
- 18151 strings out of 479624
- 361891 string characters out of 2859409
+ 18153 strings out of 479624
+ 361910 string characters out of 2859409
  634290 words of memory out of 3000000
  34846 multiletter control sequences out of 15000+200000
  413382 words of font info for 62 fonts, out of 3000000 for 9000
@@ -1132,10 +1134,10 @@ ber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
 Users/Philipp Schreiber/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb><C:/Users/Philipp Schreiber/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Part_1-Intro_Dynamic_Programming.pdf (9 pages, 199769 bytes).
-
+Output written on Part_1-Intro_Dynamic_Programming.pdf (10 pages, 205344 bytes)
+.
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
