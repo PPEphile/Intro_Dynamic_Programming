@@ -1,0 +1,8 @@
+#Tex Maxer additional files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
