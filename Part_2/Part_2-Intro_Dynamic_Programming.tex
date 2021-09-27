@@ -7,6 +7,14 @@
 \setbeamersize{text margin left=30mm,
 			text margin right=30mm}
 
+%Unnumbered Footnote
+\newcommand\blfootnote[1]{%
+\begingroup
+\renewcommand\thefootnote{}\footnote{#1}%
+\addtocounter{footnote}{-1}%
+\endgroup
+}
+
 %----
 %Information to be included in the title page:
 %%https://www.overleaf.com/learn/latex/Beamer
@@ -46,12 +54,38 @@
 \item Theorem 5 (sufficient condition)
 \end{itemize}
 \end{itemize}
+
+\blfootnote{Stokey, N.L., Lucas, R.E. and Prescott, E.C. (1989) \textit{Recursive Methods in Economic Dynamics}. Cambridge, Harvard University Press.}
+
 \end{frame}
 %---------------------------------------------------------
 
-
+%slide 3
 \begin{frame}
-
+\frametitle{The Functional Equation (Recap)}
+\begin{block}{Functional Equation}
+\begin{equation}
+v(x) = \max_{y \in \Gamma(x)} \left\lbrace F(x, y) + \beta v(y) \right\rbrace \tag{FE}
+\end{equation}
+where $\Gamma(x)$ is the set of admissible values of $y$ given the current state $x$.
+\end{block}
+\medskip
+\begin{itemize}
+\item (FE) only necessary but not sufficient
+\begin{itemize}
+\item e.g. $v(x) = \pm \infty$ is an universal solution
+\end{itemize}
+\item Supremum: least upper bound
+\end{itemize}
 \end{frame}
+
+{
+\setbeamertemplate{background}[grid][step=13]
+\begin{frame}
+\frametitle{Upper bound}
+  % frame contents here
+\end{frame}
+}
+
 
 \end{document}
