@@ -1,0 +1,86 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Boadilla}
+\usepackage{xcolor}
+\usepackage{amsmath}
+%\usepackage{parskip}
+%%\usecolortheme{seahorse}
+\setbeamersize{text margin left=30mm,
+			text margin right=30mm}
+%Turning-off navigation bar
+\beamertemplatenavigationsymbolsempty
+
+%Unnumbered Footnote
+\newcommand\blfootnote[1]{%
+\begingroup
+\renewcommand\thefootnote{}\footnote{#1}%
+\addtocounter{footnote}{-1}%
+\endgroup
+}
+
+%----
+%Information to be included in the title page:
+%%https://www.overleaf.com/learn/latex/Beamer
+\title[Dynamic Programming Part III] %optional
+{Introduction to Dynamic Programming}
+\subtitle{Part III: FE for identifying the optimal policy}
+\author[PPE Phil(e)]
+{PPE Phil(e)\inst{1}}
+\institute[] % (optional)
+{
+  \inst{1}%
+  material @ https://github.com/PPEphile
+}
+\date[2021] % (optional)
+{September 2021}
+%---
+
+\begin{document}
+%---------------------------------------------------------
+%Title Page
+\frame{\titlepage}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+%Table of contents
+\begin{frame}
+\frametitle{Table of Contents}
+\textbf{Identifying the \color{teal} optimal policy} \color{black} 
+\begin{itemize}
+\item Theorem 4 (necessary condition)
+\item Theorem 5 (sufficient condition)
+\item \textbf{Example}
+\end{itemize}
+
+\blfootnote{Stokey, N.L., Lucas, R.E. and Prescott, E.C. (1989) \textit{Recursive Methods in Economic Dynamics}. Cambridge, Harvard University Press.}
+
+\end{frame}
+%---------------------------------------------------------
+
+
+%Handwritten section
+{
+\setbeamertemplate{background}[grid][step=13]
+% change block for exercise/example
+\setbeamercolor{block body}{bg=white}
+\setbeamercolor{block title}{bg=teal, fg=white}
+
+\begin{frame}
+\frametitle{Least \underline{upper bound}}
+	%contents here
+\end{frame}
+
+\begin{frame}
+\frametitle{\underline{Least} upper bound}
+	%contents here
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Example}
+
+\end{frame}
+
+}
+
+
+
+\end{document}
