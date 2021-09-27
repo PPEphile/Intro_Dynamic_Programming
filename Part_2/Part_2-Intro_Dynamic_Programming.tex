@@ -63,13 +63,38 @@
 %slide 3
 \begin{frame}
 \frametitle{The Functional Equation (Recap)}
+\begin{itemize}
+\item We eliminated infinitely many constraints at the cost of now having to find a function
+\item \textbf{Theorem 2}: For any candidate function $v$ to be the true value function $v^*$, it needs to satisfy the (FE).
+\end{itemize}
 \begin{block}{Functional Equation}
 \begin{equation}
 v(x) = \max_{y \in \Gamma(x)} \left\lbrace F(x, y) + \beta v(y) \right\rbrace \tag{FE}
 \end{equation}
 where $\Gamma(x)$ is the set of admissible values of $y$ given the current state $x$.
 \end{block}
-\medskip
+
+\end{frame}
+
+% Slide 4
+\begin{frame}
+\frametitle{Sufficient condition}
+\begin{block}{Theorem 3}
+If $v$ is real-valued, solves the (FE) \textbf{and}
+\begin{equation*}
+\lim_{t \to \infty} \beta^{t}v(x_{t}) = 0 \quad \textrm{for all feasible paths of } (x_t)^{\infty}_{t=0}
+\end{equation*}
+then $v = v^*$
+\end{block}
+\end{frame}
+
+%Handwritten section
+{
+\setbeamertemplate{background}[grid][step=13]
+%\setbeamercolor{block body example}{fg=structure, bg=white}
+%\setbeamertemplate{block example}[shadow=false]
+\begin{frame}
+\frametitle{Least upper bound}
 \begin{itemize}
 \item (FE) only necessary but not sufficient
 \begin{itemize}
@@ -79,13 +104,18 @@ where $\Gamma(x)$ is the set of admissible values of $y$ given the current state
 \end{itemize}
 \end{frame}
 
-{
-\setbeamertemplate{background}[grid][step=13]
 \begin{frame}
-\frametitle{Upper bound}
-  % frame contents here
+	%contents here
 \end{frame}
+
+\begin{frame}[t]
+\frametitle{Example}
+\colorbox{white}{
+Consider the classical corn growing example with utility $U(c)=c$, $f(k)=k^{\alpha}$ and $\beta \in [0,1]$.}
+\end{frame}
+
 }
+
 
 
 \end{document}
