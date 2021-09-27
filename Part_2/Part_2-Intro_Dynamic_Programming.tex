@@ -6,6 +6,8 @@
 %%\usecolortheme{seahorse}
 \setbeamersize{text margin left=30mm,
 			text margin right=30mm}
+%Turning-off navigation bar
+\beamertemplatenavigationsymbolsempty
 
 %Unnumbered Footnote
 \newcommand\blfootnote[1]{%
@@ -20,7 +22,7 @@
 %%https://www.overleaf.com/learn/latex/Beamer
 \title[Dynamic Programming Part II] %optional
 {Introduction to Dynamic Programming}
-\subtitle{Part II: Functional Equation}
+\subtitle{Part II: FE for identifying the value function}
 \author[PPE Phil(e)]
 {PPE Phil(e)\inst{1}}
 \institute[] % (optional)
@@ -42,17 +44,11 @@
 %Table of contents
 \begin{frame}
 \frametitle{Table of Contents}
+\textbf{Identifying the \color{magenta} value function} \color{black} 
 \begin{itemize}
-\item \textbf{Verifying \color{magenta} value function}
-\begin{itemize}
-\item \color{black} Theorem 2 (necessary condition)
+\item Theorem 2 (necessary condition)
 \item Theorem 3 (sufficient condition)
-\end{itemize}
-\item \textbf{Verifying \color{blue}optimal policy}
-\begin{itemize}
-\item \color{black} Theorem 4 (necessary condition)
-\item Theorem 5 (sufficient condition)
-\end{itemize}
+\item \textbf{Example}
 \end{itemize}
 
 \blfootnote{Stokey, N.L., Lucas, R.E. and Prescott, E.C. (1989) \textit{Recursive Methods in Economic Dynamics}. Cambridge, Harvard University Press.}
@@ -65,7 +61,7 @@
 \frametitle{The Functional Equation (Recap)}
 \begin{itemize}
 \item We eliminated infinitely many constraints at the cost of now having to find a function
-\item \textbf{Theorem 2}: For any candidate function $v$ to be the true value function $v^*$, it needs to satisfy the (FE).
+\item \textbf{Theorem 2:} For any candidate function $v$ to be the true value function $v^*$, it needs to satisfy the (FE).
 \end{itemize}
 \begin{block}{Functional Equation}
 \begin{equation}
@@ -91,27 +87,25 @@ then $v = v^*$
 %Handwritten section
 {
 \setbeamertemplate{background}[grid][step=13]
-%\setbeamercolor{block body example}{fg=structure, bg=white}
-%\setbeamertemplate{block example}[shadow=false]
+% change block for exercise/example
+\setbeamercolor{block body}{bg=white}
+\setbeamercolor{block title}{bg=teal, fg=white}
+
 \begin{frame}
-\frametitle{Least upper bound}
-\begin{itemize}
-\item (FE) only necessary but not sufficient
-\begin{itemize}
-\item e.g. $v(x) = \pm \infty$ is an universal solution
-\end{itemize}
-\item Supremum: least upper bound
-\end{itemize}
+\frametitle{Least \underline{upper bound}}
+	%contents here
 \end{frame}
 
 \begin{frame}
+\frametitle{\underline{Least} upper bound}
 	%contents here
 \end{frame}
 
 \begin{frame}[t]
 \frametitle{Example}
-\colorbox{white}{
-Consider the classical corn growing example with utility $U(c)=c$, $f(k)=k^{\alpha}$ and $\beta \in [0,1]$.}
+\begin{block}{Corn-growing with linear utility}
+Consider the classical corn growing example with utility $U(c)=c$, $f(k)=\alpha k$ and $\alpha,\beta \in [0,1]$.
+\end{block}
 \end{frame}
 
 }
