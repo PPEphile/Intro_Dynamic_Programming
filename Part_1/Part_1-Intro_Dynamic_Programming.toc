@@ -1,2 +1,0 @@
-\beamer@sectionintoc {1}{Overview of Dynamic Programming}{3}{0}{1}
-\beamer@sectionintoc {2}{Additional Material}{10}{0}{2}
