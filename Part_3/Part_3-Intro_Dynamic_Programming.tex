@@ -2,6 +2,7 @@
 \usetheme{Boadilla}
 \usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{undertilde}
 %\usepackage{parskip}
 %%\usecolortheme{seahorse}
 \setbeamersize{text margin left=30mm,
@@ -55,7 +56,42 @@
 
 \end{frame}
 %---------------------------------------------------------
+%
+\begin{frame}
+\frametitle{Intro}
+\begin{itemize}
+\item We want to solve: 
+\begin{equation}
+\max_{0 \leq x_{t+1} \leq f(x_t)} \sum^{\infty}_{t=0} \beta^t F(x_t, x_{t+1}) \tag{SP}
+\end{equation}
+\item Last time we identified $v^*(x)$, the solution to the (SP)
+\item \color{red}\textit{ But is that really what we were after?} \color{black}
+\end{itemize}
+\end{frame}
 
+
+
+\begin{frame}
+\frametitle{A necessary condition}
+\begin{block}{Theorem 4}
+If the path $\utilde{x}^{*}$ is optimal, then
+\begin{equation*}
+v^{*}(x_{t}{*}) = F(x_{t}^{*}, x_{t+1}^{*}) + \beta v^{*}(x_{t+1}^{*}) = \max_{y \in \Gamma(x)} \left\lbrace F(x, y) + \beta v^{*}(y) \right\rbrace
+\end{equation*}
+for all $t$.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{A sufficient condition}
+\begin{block}{Theorem 5}
+If the candidate path $\hat{\utilde{x}}$ is feasible, satisfies Theorem 4 \textbf{and}
+\begin{equation*}
+\lim_{t \to \infty} \sup \beta^{t}v^{*}(\hat{x}_{t}) \leq 0 
+\end{equation*}
+then $\hat{\utilde{x}} = \utilde{x}^{*}$.
+\end{block}
+\end{frame}
 
 %Handwritten section
 {
