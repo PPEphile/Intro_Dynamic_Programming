@@ -65,14 +65,30 @@
 \max_{0 \leq x_{t+1} \leq f(x_t)} \sum^{\infty}_{t=0} \beta^t F(x_t, x_{t+1}) \tag{SP}
 \end{equation}
 \item Last time we identified $v^*(x)$, the solution to the (SP)
-\item \color{red}\textit{ But is that really what we were after?} \color{black}
+\item \color{red}\textit{But is that really what we were after?} \color{black}
 \end{itemize}
+
 \end{frame}
+
+%Handwritten section
+{
+\setbeamertemplate{background}[grid][step=13]
+% change block for exercise/example
+\setbeamercolor{block body}{bg=white}
+\setbeamercolor{block title}{bg=teal, fg=white}
+\begin{frame}[t]
+\begin{block}{Corn-growing with linear utility}
+Consider the classical corn growing example with utility $U(c)=c$, $f(k)=2 k$ and $\beta= \frac{1}{3}$ and some $k_0 \geq 0$.
+\end{block}
+\end{frame}
+
+}
 
 
 
 \begin{frame}
 \frametitle{A necessary condition}
+This gives us an intuitive necessary condition:
 \begin{block}{Theorem 4}
 If the path $\utilde{x}^{*}$ is optimal, then
 \begin{equation*}
@@ -85,11 +101,15 @@ for all $t$.
 \begin{frame}
 \frametitle{A sufficient condition}
 \begin{block}{Theorem 5}
-If the candidate path $\hat{\utilde{x}}$ is feasible, satisfies Theorem 4 \textbf{and}
+If the candidate path $\hat{\utilde{x}}$ is feasible and satisfies 
+\begin{equation*}
+v^{*}(\hat{x_{t}}) = F(\hat{x}_{t}, \hat{x}_{t+1}) + \beta v^{*}(\hat{x}_{t+1})
+\end{equation*}
+for all $t$ \textbf{and}
 \begin{equation*}
 \lim_{t \to \infty} \sup \beta^{t}v^{*}(\hat{x}_{t}) \leq 0 
 \end{equation*}
-then $\hat{\utilde{x}} = \utilde{x}^{*}$.
+then $\hat{\utilde{x}}$ is optimal.
 \end{block}
 \end{frame}
 
@@ -101,12 +121,7 @@ then $\hat{\utilde{x}} = \utilde{x}^{*}$.
 \setbeamercolor{block title}{bg=teal, fg=white}
 
 \begin{frame}
-\frametitle{Least \underline{upper bound}}
-	%contents here
-\end{frame}
-
-\begin{frame}
-\frametitle{\underline{Least} upper bound}
+\frametitle{Proof}
 	%contents here
 \end{frame}
 
