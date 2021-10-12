@@ -1,0 +1,77 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Boadilla}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{undertilde}
+%\usepackage{parskip}
+%%\usecolortheme{seahorse}
+\setbeamersize{text margin left=30mm,
+			text margin right=30mm}
+%Turning-off navigation bar
+\beamertemplatenavigationsymbolsempty
+
+
+%----
+%Information to be included in the title page:
+%%https://www.overleaf.com/learn/latex/Beamer
+\title[Dynamic Programming Part IV] %optional
+{Introduction to Dynamic Programming}
+\subtitle{Part IV: Application of FE for CRS Utility Function}
+\author[PPE Phil(e)]
+{PPE Phil(e)\inst{1}}
+\institute[] % (optional)
+{
+  \inst{1}%
+  material @ https://github.com/PPEphile
+}
+\date[2021] % (optional)
+{September 2021}
+%---
+
+\begin{document}
+%---------------------------------------------------------
+%Title Page
+\frame{\titlepage}
+%---------------------------------------------------------
+
+
+%-------------------------------------------------------
+%Handwritten section
+{
+\setbeamertemplate{background}[grid][step=13]
+% change block for exercise/example
+\setbeamercolor{block body}{bg=white}
+\setbeamercolor{block title}{bg=teal, fg=white}
+
+% for slide colour 
+%% Source: https://tex.stackexchange.com/questions/371402/checkered-background-for-beamer-presentation
+\setbeamercolor{normal text}{fg=white,bg=black!90}
+\setbeamercolor{structure}{fg=white}
+
+\setbeamercolor{alerted text}{fg=red!85!black}
+
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+
+\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+
+\setbeamercolor*{framesubtitle}{fg=white}
+
+\setbeamercolor*{block body}{fg=black,bg=black!10}
+\setbeamercolor*{block title alerted}{parent=alerted text,bg=black!15}
+%\setbeamercolor*{block title example}{parent=example text,bg=black!15}
+
+
+\begin{frame}[t]
+\begin{block}{Corn-growing with linear utility}
+Consider the classical corn growing example with utility $U(c)=c$, $f(k)=2 k$ and $\beta= \frac{1}{3}$ and some $k_0 \geq 0$.
+\end{block}
+\end{frame}
+
+}
+
+
+
+\end{document}
